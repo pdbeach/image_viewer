@@ -1,15 +1,4 @@
-Here is the tab-separated file content you can use for importing into Anki.
-Instructions for Anki Import:
- * Copy the entire text block below, starting from the first question.
- * Save it as a plain text file (e.g., import.txt).
- * Open Anki and either create a new deck or choose an existing one.
- * Go to File > Import... and select the import.txt file you just saved.
- * In the import settings window:
-   * Ensure the "Fields separated by:" option is set to Tab.
-   * Enable the "Allow HTML in fields" option.
-   * Map the first field to the Front of your card and the second field to the Back.
- * Click "Import" to add the cards to your deck.
-Note: Questions that refer to figures (e.g., Figure 1, 2, 3, 4) require you to look at the original PDF document to understand the context. A note has been added to these questions.
+
 [cite_start]Of the following sound wave modes, which one has multiple or varying wave velocities?	Lamb waves
 [cite_start]Which of the following would be considered application(s) of ultrasonic techniques?	All of the above (A. Determination of a material's elastic modulus, B. Study of a material's metallurgical structure, C. Measurement of a material's thickness)
 [cite_start]The only significant sound wave mode that will travel through a liquid is:	longitudinal
