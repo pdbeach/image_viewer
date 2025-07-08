@@ -1,0 +1,210 @@
+Here is the tab-separated file content you can use for importing into Anki.
+Instructions for Anki Import:
+ * Copy the entire text block below, starting from the first question.
+ * Save it as a plain text file (e.g., import.txt).
+ * Open Anki and either create a new deck or choose an existing one.
+ * Go to File > Import... and select the import.txt file you just saved.
+ * In the import settings window:
+   * Ensure the "Fields separated by:" option is set to Tab.
+   * Enable the "Allow HTML in fields" option.
+   * Map the first field to the Front of your card and the second field to the Back.
+ * Click "Import" to add the cards to your deck.
+Note: Questions that refer to figures (e.g., Figure 1, 2, 3, 4) require you to look at the original PDF document to understand the context. A note has been added to these questions.
+[cite_start]Of the following sound wave modes, which one has multiple or varying wave velocities?	Lamb waves
+[cite_start]Which of the following would be considered application(s) of ultrasonic techniques?	All of the above (A. Determination of a material's elastic modulus, B. Study of a material's metallurgical structure, C. Measurement of a material's thickness)
+[cite_start]The only significant sound wave mode that will travel through a liquid is:	longitudinal
+[cite_start]The acoustic impedance of a material is used to:	determine the relative amounts of sound energy coupled through and reflected at an interface.
+[cite_start]When angle beam contact testing a test piece, increasing the incident angle until the second critical angle is reached results in:	production of a surface wave..
+Acoustic energy propagates in different modes. [cite_start]Which of the following represent a mode?	All of the above (A. Longitudinal wave, B. Shear wave, C. Surface wave)
+The simple experiment where a stick in a glass of water appears disjointed at the water surface illustrates the phenomenon of:	refraction
+The crystal thickness and transducer frequency are related. [cite_start]The thinner the crystal:	the higher the frequency.
+[cite_start]The random distribution of crystallographic direction in alloys with large crystalline structure is a factor in determining.	all of the above. (A. acoustic noise levels, B. selection of test frequency, C. scattering of sound)
+[cite_start]The length of the zone adjacent to a transducer in which fluctuations in sound pressure occur is mostly affected by:	both A and B. (A. the frequency of the transducer, B. the diameter of the transducer)
+[cite_start]The differences in signals received from identical reflectors at different material distances from a transducer may be caused by:	all of the above (A. material attenuation, B. beam divergence, C. near field effects)
+[cite_start]It is possible for a discontinuity smaller than the transducer to produce indications of fluctuating amplitude as the search unit is moved laterally if testing is being performed in the	Near field.
+[cite_start]In immersion testing, the near field effects of a transducer may be eliminated by:	using an appropriate water path
+[cite_start]In Figure I shown below, assuming a uniform beam pattern, what relationship would you expect to exist between the amplitudes of the reflected laminar signals at position A and B? <br><i>(Refer to Figure 1 on page 2 of the PDF)</i>	2 to 1
+[cite_start]In the far field of a uniform ultrasonic beam, sound intensity is	maximum at the beam centerline.
+[cite_start]Which of the following may result in a long narrow rod if the beam divergence results in a reflection from a side of the test piece before the sound wave reaches the back surface?	[cite_start]Conversion from the longitudinal mode to shear mode
+[cite_start]Where does beam divergence occur?	Far field
+[cite_start]As frequency increases in ultrasonic testing, the angle of beam divergence of a given diameter crystal:	decreases.
+[cite_start]As the radius of curvature of a curved lens is increased, the focal length of the lens will:	increase
+[cite_start]When examining materials for planar flaws oriented parallel to the part surface, what testing method is most often used?	Straight beam
+If a contact angle beam transducer produces a 45° shear wave in steel, the angle produced by the same transducer in an aluminum specimen would be: (Vs\_{steel}=.323 cm/\\mu sec: Vs\_{AL}=310 cm/\\mu sec)	Less than 45°
+[cite_start]Rayleigh waves are influenced most by defects located:	close to or on the surface.
+[cite_start]The ultrasonic test method in which finger damping is most effective in locating a discontinuity is:	[cite_start]surface wave.
+[cite_start]Lamb waves can be used to detect:	laminar-type defects near the surface of a thin material.
+The ratio of the velocity of sound in water compared to that for aluminum or steel is approximately:	1:4
+Which of the following scanning methods could be classified as an immersion type test?	All of the above (A. Tank in which the search unit and test piece are immersed, B. Squirter bubbler method in which the sound is transmitted in a column of flowing water, C. Scanning with a wheel-type search unit with the transducer inside a liquid filled tire)
+In an immersion test of a piece of steel or aluminum, the water distance appears on the display as a fairly wide space between the initial pulse and the front surface reflection because of:	reduced velocity of sound in water as compared to test specimen
+Using the immersion method, a distance-amplitude curve (DAC) for a 4-inch diameter, 5-MHz search unit shows the high point of the DAC at the 1-inch block. One day later the high point of the DAC for the same search unit is at the 2-inch block. Assuming calibration has not changed, this would indicate that the search unit:	both B and C (B. is becoming defective, C. has the beam of a smaller search unit)
+What law can be used to calculate the angle of refraction within a metal for both longitudinal and shear waves?	Snell's Law
+At an interface between two different materials, an impedance difference results in:	division of sound energy into transmitted and reflected modes.
+When using focused transducers, non-symmetry in a propagated sound beam may be caused by:	all of the above. (A. backing material variations, B. lens centering or misalignment, C. porosity in lenses)
+Ultrasonic wheel units may be used for which of the following types of examination?	All of the above (A. Straight or longitudinal examination, B. Angle-beam or shear wave examination, C. Surface wave or Rayleigh wave)
+[cite_start]During straight beam testing, test specimens with non-parallel front and back surfaces can cause:	[cite_start]partial or total loss of back reflection.
+[cite_start]In the immersion technique, the distance between the face of the transducer and the test surface (water path) is usually adjusted so that the time required to send the soundbeam through the water:	is greater than the time required for the sound to travel through the test piece.
+In a B-scan display, the length of a screen indication from a discontinuity is related to	the discontinuity's length in the direction of the transducer travel.
+[cite_start]Which circuit triggers the pulser and sweep circuits in an A-scan display?	Clock
+[cite_start]On an A-scan display, the "dead zone," refers to:	the distance covered by the front surface pulse width and recovery time.
+[cite_start]On an A-scan display, what represents the intensity of a reflected beam?	Signal amplitude
+[cite_start]Of the following scan types, which one can be used to produce a recording of flaw areas superimposed over a plan view of the test piece?	C-scan
+[cite_start]In immersion testing in a small tank, a manually operated manipulator is used to:	both A and B (A. set the proper water path, B. set the proper transducer angle)
+[cite_start]A 45° shear angle beam transducer produces a wave in the metal which is polarized:	perpendicular to the direction of propagation and at 45° to the entry surface.
+[cite_start]In straight (normal) beam contact testing, a reduction in the back surface reflection amplitude could indicate.	all of the above. (A. inadequate coupling, B. a flaw which is not normal to the beam, C. a near surface defect that cannot be resolved from the main bang (initial pulse))
+A six-inch diameter rod is being inspected for centerline cracks. [cite_start]The A-scan presentation for one complete path through the rod is as shown in Figure 2. Where should there be an alarm gate? [cite_start]<br><i>(Refer to Figure 2 on page 6 of the PDF)</i>	An alarm gate should be used between points B and D.
+[cite_start]In an automatic scanning immersion unit, the bridge or carriage serves to:	support the manipulator and scanner tube and to move it about transversely and longitudinally.
+[cite_start]When adjusting the flaw locating rule for a shear wave weld inspection, the zero point on the rule must coincide with the:	sound beam exit point of the wedge.
+[cite_start]A special scanning device with the transducer mounted in a tire-like container filled with couplant is commonly called	a search unit.
+[cite_start]Which best describes a typical display of a crack whose major surface is perpendicular to the ultrasonic beam?	A sharp indication
+[cite_start]A primary purpose of a reference standard is:	[cite_start]to provide a guide for adjusting instrument controls to reveal discontinuities that are considered harmful to the end use of the product.
+[cite_start]Compensation for the variation in echo height related to variations in discontinuity depth in the test material is known as:	distance amplitude correction.
+[cite_start]Which of the following is a reference reflector that is not dependent on beam angle?	A side drilled hole which is parallel to the plate surface and perpendicular to the sound path
+During a straight beam ultrasonic test a discontinuity indication is detected which is small in amplitude compared to the loss in amplitude of back reflection. [cite_start]The orientation of this discontinuity is probably:	[cite_start]such that complete loss of back reflection will result.
+A discontinuity is located having an orientation such that its long axis is parallel to the sound beam. [cite_start]The indication from such a discontinuity will be:	small in proportion to the length of the discontinuity.
+[cite_start]Gas discontinuities are reduced to flat discs or other shapes parallel to the surface by:	rolling.
+[cite_start]In which zone does the amplitude of an indication from a given discontinuity diminish exponentially as the distance increases?	Far field zone
+[cite_start]A smooth flat discontinuity whose major plane is not perpendicular to the direction of sound propagation may be indicated by:	all of the above. (A. an echo amplitude comparable in magnitude to the back surface reflection, B. a complete loss of back surface reflection, C. an echo amplitude larger in magnitude than the back surface reflection)
+[cite_start]Using a pulse-echo technique, if the major plane of a flat discontinuity is oriented at some angle other than perpendicular to the direction of sound propagation, the result may be:	loss or lack of a received discontinuity echo.
+[cite_start]As transducer diameter decreases, the beam spread:	increases.
+[cite_start]A set of standard reference blocks with the same geometrical configuration and dimensions other than the size of the calibration reflectors, e.g., flat bottom holes, is called a set of:	area/amplitude standards.
+[cite_start]The angle at which 90° refraction of a longitudinal soundwave is reached is called:	the first critical angle.
+[cite_start]Which of the following controls the voltage supplied to the vertical deflection plates of the CRT in an A-scan UT setup?	Amplifier circuit
+Attenuation is a difficult quantity to measure accurately, particularly in solid materials, at the test frequencies normally used. [cite_start]The overall result usually observed includes other loss mechanisms which can include:	all of the above. (A. beam spread, B. couplant mismatch, C. test piece geometry)
+[cite_start]The vertical linear range of a test instrument may be determined by obtaining ultrasonic responses from:	[cite_start]a set of area-amplitude reference blocks
+[cite_start]Large grains in a metallic test specimen usually result in:	all of the above. (A. decrease or loss of back surface reflection, B. large "hash" or noise indications, C. decrease in penetration)
+[cite_start]The total energy losses occurring in all materials is called:	attenuation
+[cite_start]Delay-tip (stand-off) type contact search units are primarily used for:	thickness measurement or flaw detection in thin materials.
+Acoustical lenses are commonly used for contour correction. [cite_start]When scanning the inside of a pipe section by the immersion method, which of the following lens types would be used?	Convex
+[cite_start]In Figure 3, transducer A is being used to establish: <br><i>(Refer to Figure 3 on page 9 of the PDF)</i>	exit point.
+[cite_start]In Figure 3, transducer C is being used to check: <br><i>(Refer to Figure 3 on page 9 of the PDF)</i>	sensitivity calibration.
+[cite_start]In Figure 3, transducer D is being used to check: <br><i>(Refer to Figure 3 on page 9 of the PDF)</i>	verification of wedge angle.
+[cite_start]When the incident angle is chosen to be between the first and second critical angles, the ultrasonic wave generated within the part will be:	shear
+[cite_start]In Figure 4, transducer B is being used to check <br><i>(Refer to Figure 4 on page 10 of the PDF)</i>	resolution.
+[cite_start]The angle at which 90° refraction of the shear wave mode occurs is called the:	second critical angle.
+In a water immersion test, ultrasonic energy is transmitted into steel at an incident angle of 14°. What is the angle of the refracted shear wave within the material? [cite_start](V\_{s}=3.2\\times10^{5}cm/sec, V\_{w}=1.5\\times10^{5}em/see) [sic]	31°
+If you were requested to design a plastic shoe to generate a Rayleigh wave in aluminum, what would be the incident angle of the ultrasonic energy? [cite_start](V\_{AL}=3.1\\times10^{5}cm/sec, V\_{p}=2.6\\times10^{5}em/sec) [sic]	57°
+Compute the wavelength of ultrasonic energy in lead at 1 Mhz. [cite_start](V\_{l}=2.1\\times10^{5}cm/see, V=\\lambda\\times F) [sic]	0.21 cm.
+[cite_start]The attenuation of energy within a material in the far field of the ultrasonic beam may be expressed as the:	exponential decay.
+For aluminum and steel the longitudinal velocity is approximately ... the shear velocity.	twice
+[cite_start]Water travel distance for immersion inspections should be	such that the second front reflection does not appear between the first front and back reflections.
+[cite_start]The electronic circuitry that allows selection and processing of only those signals relating to discontinuities that occur in specific zones of a part is called:	an electronic gate.
+[cite_start]When conducting a contact ultrasonic test, the "hash" or irregular signals that appear in the CRT display of the area being inspected could be caused by:	coarse grains in the structure.
+[cite_start]In inspecting a 4-inch diameter threaded steel cylinder for radial cracks extending from the root of the threads, it would be preferable to transmit:	[cite_start]longitudinal waves from the end of the cylinder and perpendicular to the direction of the thread roots.
+[cite_start]In an immersion inspection of raw material, the water travel distance should be:	equal to the water travel distance used in setting up on the reference standards
+[cite_start]The angle formed by an ultrasonic wave as it enters a medium of different velocity than the one from which it came and a line drawn perpendicular to the interface between the two media is called:	the angle of refraction.
+[cite_start]The process of adjusting an instrument or device to a reference standard is referred to as:	calibration.
+[cite_start]An electron tube in which a beam of electrons from the cathode is used to reproduce an image on a fluorescent screen at the end of the tube is referred to as:	a cathode ray tube.
+[cite_start]A grouping of a number of crystals in one search unit, with all contact surfaces in the same plane, and vibrating in phase with each other to act as a single transducer is called a:	crystal mosaic..
+[cite_start]The scattering of the rays of an ultrasonic beam due to reflection from a highly irregular surface is called:	dispersion
+[cite_start]The angle of reflection is:	equal to the angle of incidence.
+[cite_start]The angular position of the reflecting surface of a planar discontinuity with respect to the entry surface is referred to as:	the orientation of the discontinuity
+[cite_start]A short burst of alternating electrical energy is called.	a pulse.
+[cite_start]In ultrasonic testing, the time duration of the transmitted pulse is referred to as:	the pulse length or pulse width
+[cite_start]The phenomenon by which a wave strikes a boundary and changes the direction of its propagation within the same medium is referred to as	reflection.
+[cite_start]The change in direction of an ultrasonic beam when it passes from one medium to another whose velocity differs from that of the first medium is called:	refraction.
+[cite_start]The coated inside surface of the large end of a cathode ray tube which becomes luminous when struck by an electron beam is called:	a CRT screen.
+[cite_start]Which of the following modes of vibration exhibits the shortest wavelength at a given frequency and in a given material?	Surface wave
+[cite_start]In general, shear waves are more sensitive to small discontinuities than longitudinal waves for a given frequency and in a given material because:	the wavelength of shear waves is shorter than the wavelength of longitudinal waves.
+[cite_start]In general, which of the following modes of vibration would have the greatest penetrating power in a coarse-grained material if the frequency of the waves are the same?	Longitudinal
+[cite_start]A testing technique in which the crystal or transducer is parallel to the test surface and ultrasonic waves enter the material being testing in a direction perpendicular to the test surface is:	straight beam testing.
+[cite_start]The distance from a given point on an ultrasonic wave to the next corresponding point is referred to as:	wavelength.
+[cite_start]The speed with which ultrasonic waves travel through a material is known as its	[cite_start]velocity of sound energy.
+[cite_start]A substance that reduces the surface tension of a liquid is referred to as.	a wetting agent.
+[cite_start]The transducers most commonly found in ultrasonic search units (probes) used for discontinuity testing utilize.	[cite_start]piezoelectric principles.
+[cite_start]Mechanical and electrical stability, insolubility in liquids, and resistance to aging are three advantages of search units containing transducers made of:	quartz.
+[cite_start]The formula \\frac{sin\~\\Theta\_{1}}{V\_{1}}=\\frac{sin\~\\Theta\_{2}}{V\_{2}} is referred to as:	Snell's law.
+[cite_start]The formula \\frac{sin\~\\theta\_{1}}{V\_{1}}=\\frac{sin\~\\theta}{V\_{2}} is used to determine:	angular relationships.
+[cite_start]The amount of energy reflected from a discontinuity will be dependent on:	all of the above. (A. the size of the discontinuity, B. the orientation of the discontinuity, C. the type of discontinuity)
+[cite_start]If an ultrasonic wave is transmitted through an interface of two materials in which the first material has a higher acoustic impedance value but the same velocity value as the second material, the angle of refraction will:	be the same as the angle of incidence
+[cite_start]Which of the following frequencies would probably result in the greatest ultrasonic attenuation losses?	25 megahertz
+[cite_start]The product of the sound velocity and the density of a material is known as the:	acoustic impedance of the material.
+[cite_start]The amplifier range over which the unsaturated signal response increases in amplitude in proportion to the discontinuity surface area is the:	linear range.
+[cite_start]When inspecting a rolled or forged surface with a thin scale that is generally tightly adhering to the part, what is necessary to do before testing the part?	Clean the surface of loose scale
+[cite_start]The angle of reflection of an ultrasonic beam at an aluminum-water interface is:	equal to the angle of incidence.
+[cite_start]What kind of waves travel at a velocity slightly less than shear waves and their mode of propagation is both longitudinal and transverse with respect to the surface?	Rayleigh waves
+[cite_start]Which ultrasonic test frequency would probably provide the best penetration in a 12-inch thick specimen of coarse-grained steel?	1 megahertz
+[cite_start]During immersion testing of an ASTM Ultrasonic Standard Reference Block, a B-scan presentation system will show a:	[cite_start]cross section of the reference block, showing the top and bottom surfaces of the block and the location of the hole bottom in the block.
+[cite_start]Properties of shear or transverse waves used for ultrasonic testing include:	particle motion normal to propagation direction, and a propagation velocity which is about ½ the longitudinal wave velocity in the same material.
+[cite_start]One of the most common applications of ultrasonic tests employing shear waves is:	detection of discontinuities in welds, tube, and pipe.
+[cite_start]Significant errors in ultrasonic thickness measurement can occur if:	[cite_start]the velocity of propagation deviates substantially from an assumed constant value for a given material.
+[cite_start]Generally, the best ultrasonic testing method for detecting discontinuities oriented along the fusion zone in a welded plate is:	an angle-beam method using shear waves.
+[cite_start]An ultrasonic testing instrument that displays pulses representing the magnitude of reflected ultrasound as a function of time or depth of metal is said to contain:	an A-scan presentation.
+At a water-to-steel interface the angle of incidence in water is 7°. [cite_start]The principal mode of vibration that exists in the steel is:	longitudinal.
+[cite_start]In a liquid medium, the only mode of vibration that can exist is:	longitudinal.
+[cite_start]In an ultrasonic instrument, the number of pulses produced by an instrument in a given period of time is known as the:	pulse repetition rate.
+[cite_start]In a basic pulse-echo ultrasonic instrument, the component that coordinates the action and timing of other components is called a:	synchronizer, clock, or timer.
+[cite_start]In a basic pulse-echo ultrasonic instrument, the component that produces the voltage that activates the search unit is called:	a pulser.
+[cite_start]In a basic pulse-echo ultrasonic instrument, the component that produces the time base line is called a:	sweep circuit.
+[cite_start]In a basic pulse-echo ultrasonic instrument, the component that produces visible signals on the CRT which are used to measure distance is called a:	marker circuit.
+[cite_start]Most basic pulse-echo ultrasonic instruments use:	an A-scan presentation.
+[cite_start]The cathode ray tube screen will display a plan view of the part outline and defects when using	a C-scan presentation.
+[cite_start]The incident angles at which 90° refraction of longitudinal and shear waves occurs are called:	the critical angles.
+[cite_start]Compression waves whose particle displacement is parallel to the direction of propagation are called:	longitudinal waves.
+[cite_start]Which of the following modes of vibration are quickly damped out when testing by the immersion method?	Surface waves.
+[cite_start]The motion of particles in a shear wave is:	[cite_start]transverse to the direction of beam propagation.
+An ultrasonic longitudinal wave travels in aluminum with a velocity of 635,000 cm/sec and has a frequency of one megahertz. [cite_start]The wavelength of this ultrasonic wave is:	6.35 millimeters.
+[cite_start]The refraction angle of longitudinal ultrasonic waves passing from water into a metallic material at angles other than normal to the interface is primarily a function of	[cite_start]the relative velocities of sound in water and metal.
+[cite_start]In contact testing, shear waves can be induced in the test material by:	using a transducer mounted on a plastic wedge so that sound enters the part at an angle:
+[cite_start]As frequency increases in ultrasonic testing, the angle of beam divergence of a given diameter crystal.	decreases.
+[cite_start]Which of the following is not an advantage of contact ultrasonic search units (probes) adapted with lucite shoes?	Increases sensitivity
+[cite_start]In which medium listed below would the velocity of sound be lowest?	Air
+A longitudinal ultrasonic wave is transmitted from water into steel at an angle of 5° from the normal. [cite_start]In such a case, the refracted angle of the transverse wave is:	less than the refracted angle of the longitudinal wave
+[cite_start]The velocity of longitudinal waves will be highest in:	aluminum
+[cite_start]In steel, the velocity of sound is greatest in which of the following modes of vibration?	Longitudinal
+[cite_start]The acoustic impedance is:	the product of the density of the material and the velocity of sound in the material
+[cite_start]Thin sheet may be inspected with the ultrasonic wave directed normal to the surface by observing	the multiple reflection pattern.
+[cite_start]A diagram in which the entire circuit stage of sections are shown by geometric figures and the path of the signal of energy by lines and or arrows is called a	block diagram
+[cite_start]A hole produced during the solidification of metal due to escaping gases is called:	a blow hole.
+[cite_start]A discontinuity that occurs during the casting of molten metal which may be caused by the splashing, surging, interrupted pouring, or the meeting of two streams of metal coming from different directions is called:	a cold shut.
+[cite_start]The ratio between the wave speed in one material and the wave speed in a second material is called:	the Index of Refraction.
+[cite_start]The expansion and contraction of a magnetic material under the influence of a changing magnetic field is referred to as:	magnetostriction.
+[cite_start]The ratio of stress to strain in a material within the elastic limit is called	both A and B (A. Young's modulus, B. the Modulus of Elasticity)
+[cite_start]A point, line, or surface of a vibrating body marked by absolute or relative freedom from vibratory motion is referred to as.	a node.
+[cite_start]The factor which determines the amount of reflection at the interface of two dissimilar materials is:	the specific acoustic impedance.
+[cite_start]A quartz crystal cut so that its major faces are parallel to the Z and Y axes and perpendicular to the X axis is called	an X-cut crystal.
+[cite_start]The equation describing wavelength in terms of velocity and frequency is	wavelength = velocity / frequency.
+[cite_start]Which of the following can occur when an ultrasonic beam reaches the interface of two dissimilar materials?	All of the above (A. Reflection, B. Refraction, C. Mode conversion)
+When inspecting aluminum by the immersion method using water for a couplant, the following information is known: Velocity of sound in water = 1.49x10⁵ cm/sec, velocity of longitudinal waves in aluminum = 6.32x10⁵ cm/sec, and angle of incidence = 5°. [cite_start]The angle of refraction for longitudinal waves is approximately:	22°
+[cite_start]Of the piezoelectric materials listed below, the most efficient sound transmitter is:	barium titanate.
+[cite_start]Of the piezoelectric materials listed below, the most efficient sound receiver is:	lithium sulfate.
+[cite_start]The most commonly used method of producing shear waves in a test part when inspecting by the immersion method is:	by angulating the search tube to the proper angle
+[cite_start]Beam divergence is a function of the dimensions of the crystal and the wavelength of the beam transmitted through a medium, and it:	increases if the frequency or crystal diameter is decreased.
+[cite_start]The wavelength of an ultrasonic wave is:	directly proportional to velocity and inversely proportional to frequency.
+[cite_start]The fundamental frequency of a piezoelectric crystal is primarily a function of:	the thickness of the crystal.
+[cite_start]Acoustic velocities are primarily described by:	both A and B (A. density, B. elasticity)
+[cite_start]Inspection of castings is often impractical because of:	coarse grain structure.
+[cite_start]Lamb waves may be used to inspect:	thin sheet..
+[cite_start]The formula used to determine the angle of beam divergence of a quartz crystal is:	[cite_start]sin θ/2 = 1.22 wavelength/diameter.
+[cite_start]The resolving power of a search unit is directly proportional to its:	bandwidth.
+[cite_start]Acoustic lens elements with which of the following permit focusing the sound energy to enter cylindrical surfaces normally or along a line focus?	Cylindrical curvatures
+[cite_start]In the basic pulse-echo instrument, the synchronizer, clock or timer circuit will determine the instrument's:	pulse repetition rate..
+[cite_start]The primary requirement of a paintbrush transducer is that:	[cite_start]the intensity of the beam pattern not vary greatly over the entire length of the transducer.
+[cite_start]Heat conduction, viscous friction, elastic hysteresis, and scattering are four different mechanisms which lead to:	attenuation.
+[cite_start]Since the velocity of sound in aluminum is approximately 245,000 in/sec, it takes how long for sound to travel through 1 inch of aluminum?	4 microseconds
+[cite_start]When testing a part with a rough surface, it is generally advisable to use:	a lower frequency search unit and a more viscous couplant than is used on parts with a smooth surface.
+[cite_start]Reflection indications from a weld area being inspected by the angle-beam technique may represent:	all three of the above. (A. porosity, B. cracks, C. weld bead)
+During a test using A-scan equipment, strong indications that move at varying rates across the screen in the horizontal direction appear. It is impossible to repeat a particular screen pattern by scanning the same area. [cite_start]A possible cause of these indications is:	electrical interference.
+[cite_start]In an A-scan presentation, the horizontal line formed by the uniform and repeated movement of an electron beam across the fluorescent screen of a cathode ray tube is called:	a sweep line.
+[cite_start]Which of the following frequencies would probably result in the greatest amount of attenuation losses?	10 megahertz
+[cite_start]In general, which waves will travel around gradual curves with little or no reflection from the curve?	Surface waves
+[cite_start]To evaluate and accurately locate discontinuities after scanning a part with a paintbrush transducer, it is generally necessary to use a:	search unit with a smaller crystal.
+An ultrasonic instrument has been calibrated to obtain a 2-inch indication from a 5/64-inch diameter flat-bottomed hole located 3 inches from the front surface of an aluminum reference block. When testing an aluminum forging, a 2-inch indication is obtained from a discontinuity located 3 inches from the entry surface. [cite_start]The cross-sectional area of this discontinuity is probably:	[cite_start]greater than the area of the 5/64-inch flat-bottomed hole.
+[cite_start]As the impedance ratio of two dissimilar materials increases, the percentage of sound coupled through an interface of such materials:	decreases.
+[cite_start]Low frequency sound waves are not generally used to test thin materials because of:	poor near-surface resolution.
+[cite_start]When using two separate search units (one a transmitter, the other a receiver), the most efficient combination would be:	a barium titanate transmitter and a lithium sulfate receiver.
+[cite_start]In immersion testing, the accessory equipment to which the search cable and the search unit are attached is called a:	search tube or scanning tube.
+[cite_start]In general, discontinuities in wrought products tend to be oriented:	in the direction of grain flow.
+[cite_start]In immersion testing irrelevant or false indications caused by contoured surfaces are likely to result in a:	broad-based indication.
+[cite_start]In contact testing, defects near the entry surface cannot always be detected because of:	the dead zone.
+[cite_start]In cases where the diameter of tubing being inspected is smaller than the diameter of the transducer, what can be used to confine the sound beam to the proper range of angles?	A collimator
+[cite_start]The maximum scanning speed possible is primarily determined by:	the pulse repetition rate of the test instrument.
+[cite_start]Which of the following is frequently displayed by a facsimile recording instead of a CRT presentation?	C-scan presentation
+[cite_start]The property of certain materials to transform electrical energy to mechanical energy and vice versa is called:	piezoelectric effect.
+[cite_start]Surface waves are reduced to an energy level of approximately 1/25 of the original power at a depth of:	one wavelength.
+[cite_start]To prevent the appearance of the second front surface indication before the first back reflection when inspecting aluminum by the immersion method (water is used as a couplant), it is necessary to have a minimum of at least one inch of water for every:	four inches of aluminum.
+[cite_start]Increasing the length of the pulse used to activate the search unit will:	increase the strength of the ultrasound but decrease the resolving power of the instrument.
+The lack of parallelism between the entry surface and the back surface may result in a screen pattern that does not contain back reflection indications.
+[cite_start]A discontinuity with a concave surface will:	cause the reflected beam to focus at a point determined by the curvature of the discontinuity.
+[cite_start]When testing tapered plate by the immersion method, the plate should be positioned to ensure:	a uniform water distance over the entire area of the plate
+[cite_start]Angle beam testing of plate will often miss:	laminations that are parallel to the front surface.
