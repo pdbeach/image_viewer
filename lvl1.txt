@@ -1,34 +1,76 @@
 import sys
 import numpy as np
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
-QHBoxLayout, QGridLayout, QLabel, QLineEdit,
-QPushButton, QGroupBox, QMessageBox)
-from PyQt5.QtCore import Qt
+QHBoxLayout, QLabel, QLineEdit, QPushButton,
+QGroupBox, QGridLayout, QTextEdit)
+
+def computeRectangleParams(points):
+p0, p1, p2, p3 = points
+
+```
+# Find adjacent points to p0 (the two closest points)
+distances = [(np.linalg.norm(p - p0), i, p) for i, p in enumerate([p1, p2, p3])]
+distances.sort(key=lambda x: x[0])
+
+# Two closest are adjacent, furthest is diagonal
+adj1 = distances[0][2]
+adj2 = distances[1][2]
+
+# Edge vectors from starting point
+edge1 = adj1 - p0
+edge2 = adj2 - p0
+
+# Normal vector (direction perpendicular to the plane)
+normal = np.cross(edge1, edge2)
+normalLen = np.linalg.norm(normal)
+if normalLen > 1e-10:
+    normal = normal / normalLen
+else:
+    normal = np.array([0, 0, 1])
+
+# Sizes are the lengths of the edges
+size1 = np.linalg.norm(edge1)
+size2 = np.linalg.norm(edge2)
+
+return {
+    'start': p0,
+    'direction': normal,
+    'sizeX': size1,
+    'sizeY': size2,
+    'sizeZ': 0.001,
+    'edge1': edge1,
+    'edge2': edge2
+}
+```
 
 class RectangleConverter(QMainWindow):
 def **init**(self):
 super().**init**()
 self.setWindowTitle(“Rectangle Coordinate Converter”)
-self.setMinimumWidth(400)
+self.setMinimumWidth(500)
+self.initUI()
 
 ```
+def initUI(self):
     centralWidget = QWidget()
     self.setCentralWidget(centralWidget)
     mainLayout = QVBoxLayout(centralWidget)
     
-    # Input section
-    inputGroup = QGroupBox("Input: Four Corner Points (XYZ)")
+    # Input group - 4 corner points
+    inputGroup = QGroupBox("Input: 4 Corner Points (X, Y, Z)")
     inputLayout = QGridLayout()
     
     self.pointInputs = []
     for i in range(4):
-        inputLayout.addWidget(QLabel(f"Point {i+1}:"), i, 0)
+        label = QLabel(f"Point {i+1}:")
         xEdit = QLineEdit()
         yEdit = QLineEdit()
         zEdit = QLineEdit()
         xEdit.setPlaceholderText("X")
         yEdit.setPlaceholderText("Y")
         zEdit.setPlaceholderText("Z")
+        
+        inputLayout.addWidget(label, i, 0)
         inputLayout.addWidget(xEdit, i, 1)
         inputLayout.addWidget(yEdit, i, 2)
         inputLayout.addWidget(zEdit, i, 3)
@@ -42,18 +84,18 @@ self.setMinimumWidth(400)
     convertBtn.clicked.connect(self.convert)
     mainLayout.addWidget(convertBtn)
     
-    # Output section
+    # Output group
     outputGroup = QGroupBox("Output: CAD Dialog Format")
     outputLayout = QGridLayout()
     
+    # Starting point
+    outputLayout.addWidget(QLabel("Starting Point:"), 0, 0)
     self.startX = QLineEdit()
     self.startY = QLineEdit()
     self.startZ = QLineEdit()
     self.startX.setReadOnly(True)
     self.startY.setReadOnly(True)
     self.startZ.setReadOnly(True)
-    
-    outputLayout.addWidget(QLabel("Starting Point:"), 0, 0)
     outputLayout.addWidget(QLabel("X:"), 0, 1)
     outputLayout.addWidget(self.startX, 0, 2)
     outputLayout.addWidget(QLabel("Y:"), 0, 3)
@@ -61,38 +103,48 @@ self.setMinimumWidth(400)
     outputLayout.addWidget(QLabel("Z:"), 0, 5)
     outputLayout.addWidget(self.startZ, 0, 6)
     
-    self.dx = QLineEdit()
-    self.dy = QLineEdit()
-    self.dz = QLineEdit()
-    self.dx.setReadOnly(True)
-    self.dy.setReadOnly(True)
-    self.dz.setReadOnly(True)
-    
+    # Direction
     outputLayout.addWidget(QLabel("Direction:"), 1, 0)
+    self.dirX = QLineEdit()
+    self.dirY = QLineEdit()
+    self.dirZ = QLineEdit()
+    self.dirX.setReadOnly(True)
+    self.dirY.setReadOnly(True)
+    self.dirZ.setReadOnly(True)
     outputLayout.addWidget(QLabel("dX:"), 1, 1)
-    outputLayout.addWidget(self.dx, 1, 2)
+    outputLayout.addWidget(self.dirX, 1, 2)
     outputLayout.addWidget(QLabel("dY:"), 1, 3)
-    outputLayout.addWidget(self.dy, 1, 4)
+    outputLayout.addWidget(self.dirY, 1, 4)
     outputLayout.addWidget(QLabel("dZ:"), 1, 5)
-    outputLayout.addWidget(self.dz, 1, 6)
+    outputLayout.addWidget(self.dirZ, 1, 6)
     
+    # Size
+    outputLayout.addWidget(QLabel("Size:"), 2, 0)
     self.sizeX = QLineEdit()
     self.sizeY = QLineEdit()
     self.sizeZ = QLineEdit()
     self.sizeX.setReadOnly(True)
     self.sizeY.setReadOnly(True)
     self.sizeZ.setReadOnly(True)
-    
-    outputLayout.addWidget(QLabel("Size:"), 2, 0)
-    outputLayout.addWidget(QLabel("X:"), 2, 1)
+    outputLayout.addWidget(QLabel("Size X:"), 2, 1)
     outputLayout.addWidget(self.sizeX, 2, 2)
-    outputLayout.addWidget(QLabel("Y:"), 2, 3)
+    outputLayout.addWidget(QLabel("Size Y:"), 2, 3)
     outputLayout.addWidget(self.sizeY, 2, 4)
-    outputLayout.addWidget(QLabel("Z:"), 2, 5)
+    outputLayout.addWidget(QLabel("Size Z:"), 2, 5)
     outputLayout.addWidget(self.sizeZ, 2, 6)
     
     outputGroup.setLayout(outputLayout)
     mainLayout.addWidget(outputGroup)
+    
+    # Verification output
+    verifyGroup = QGroupBox("Verification")
+    verifyLayout = QVBoxLayout()
+    self.verifyText = QTextEdit()
+    self.verifyText.setReadOnly(True)
+    self.verifyText.setMaximumHeight(150)
+    verifyLayout.addWidget(self.verifyText)
+    verifyGroup.setLayout(verifyLayout)
+    mainLayout.addWidget(verifyGroup)
 
 def convert(self):
     try:
@@ -103,48 +155,159 @@ def convert(self):
             z = float(zEdit.text())
             points.append(np.array([x, y, z]))
         
-        # Use first point as starting point
-        startPoint = points[0]
+        result = computeRectangleParams(points)
         
-        # Find the two edges from the starting point
-        edge1 = points[1] - points[0]
-        edge2 = points[3] - points[0]
+        self.startX.setText(f"{result['start'][0]:.6g}")
+        self.startY.setText(f"{result['start'][1]:.6g}")
+        self.startZ.setText(f"{result['start'][2]:.6g}")
         
-        # Calculate normal (direction) as cross product of edges
-        normal = np.cross(edge2, edge1)  # Swapped order to flip direction
-        normalMag = np.linalg.norm(normal)
-        if normalMag > 0:
-            normal = normal / normalMag
+        self.dirX.setText(f"{result['direction'][0]:.6g}")
+        self.dirY.setText(f"{result['direction'][1]:.6g}")
+        self.dirZ.setText(f"{result['direction'][2]:.6g}")
         
-        # Calculate sizes
-        size1 = np.linalg.norm(edge1)
-        size2 = np.linalg.norm(edge2)
+        self.sizeX.setText(f"{result['sizeX']:.6g}")
+        self.sizeY.setText(f"{result['sizeY']:.6g}")
+        self.sizeZ.setText(f"{result['sizeZ']:.6g}")
         
-        # Determine which size corresponds to which axis
-        edge1Normalized = edge1 / size1 if size1 > 0 else edge1
-        edge2Normalized = edge2 / size2 if size2 > 0 else edge2
+        # Verify
+        verifyText = self.verifyResult(points, result)
+        self.verifyText.setText(verifyText)
         
-        # Set outputs
-        self.startX.setText(f"{startPoint[0]:.6g}")
-        self.startY.setText(f"{startPoint[1]:.6g}")
-        self.startZ.setText(f"{startPoint[2]:.6g}")
-        
-        self.dx.setText(f"{normal[0]:.6g}")
-        self.dy.setText(f"{normal[1]:.6g}")
-        self.dz.setText(f"{normal[2]:.6g}")
-        
-        # Size X is along edge1, Size Y is along edge2, Size Z is thickness (minimal)
-        self.sizeX.setText(f"{-size1:.6g}")
-        self.sizeY.setText(f"{size2:.6g}")
-        self.sizeZ.setText("0.001")
-        
-    except ValueError:
-        QMessageBox.warning(self, "Input Error", "Please enter valid numbers for all coordinates.")
-    except Exception as e:
-        QMessageBox.warning(self, "Error", str(e))
+    except ValueError as e:
+        self.verifyText.setText(f"Error: Please enter valid numbers for all coordinates.\n{e}")
+
+def verifyResult(self, inputPoints, result):
+    start = result['start']
+    edge1 = result['edge1']
+    edge2 = result['edge2']
+    
+    # Reconstruct the 4 corners
+    reconstructed = [
+        start,
+        start + edge1,
+        start + edge2,
+        start + edge1 + edge2
+    ]
+    
+    text = "Reconstructed corners from CAD parameters:\n"
+    for i, p in enumerate(reconstructed):
+        text += f"  Corner {i+1}: ({p[0]:.6g}, {p[1]:.6g}, {p[2]:.6g})\n"
+    
+    text += "\nOriginal input points:\n"
+    for i, p in enumerate(inputPoints):
+        text += f"  Point {i+1}: ({p[0]:.6g}, {p[1]:.6g}, {p[2]:.6g})\n"
+    
+    # Check if all input points are accounted for
+    matched = []
+    for ip in inputPoints:
+        for j, rp in enumerate(reconstructed):
+            if np.allclose(ip, rp, atol=1e-6):
+                matched.append(True)
+                break
+        else:
+            matched.append(False)
+    
+    if all(matched):
+        text += "\n✓ VERIFICATION PASSED: All input points match reconstructed corners."
+    else:
+        text += "\n✗ VERIFICATION FAILED: Some points don't match."
+    
+    return text
+```
+
+def runTests():
+print(“Running automated tests…\n”)
+
+```
+# Test 1: Simple axis-aligned rectangle in XY plane
+print("Test 1: Axis-aligned rectangle in XY plane")
+points1 = [
+    np.array([0, 0, 0]),
+    np.array([10, 0, 0]),
+    np.array([0, 5, 0]),
+    np.array([10, 5, 0])
+]
+testConversion(points1)
+
+# Test 2: Rectangle at an offset
+print("\nTest 2: Rectangle at offset position")
+points2 = [
+    np.array([100, 200, 50]),
+    np.array([110, 200, 50]),
+    np.array([100, 215, 50]),
+    np.array([110, 215, 50])
+]
+testConversion(points2)
+
+# Test 3: Tilted rectangle in 3D
+print("\nTest 3: Tilted rectangle in 3D space")
+points3 = [
+    np.array([0, 0, 0]),
+    np.array([10, 0, 5]),
+    np.array([0, 8, 0]),
+    np.array([10, 8, 5])
+]
+testConversion(points3)
+
+# Test 4: Points given in different order
+print("\nTest 4: Points in scrambled order")
+points4 = [
+    np.array([5, 5, 0]),      # p0
+    np.array([15, 15, 0]),    # diagonal to p0
+    np.array([15, 5, 0]),     # adjacent
+    np.array([5, 15, 0])      # adjacent
+]
+testConversion(points4)
+```
+
+def testConversion(points):
+result = computeRectangleParams(points)
+
+```
+print(f"  Input points:")
+for i, p in enumerate(points):
+    print(f"    P{i+1}: {p}")
+
+print(f"  Start: {result['start']}")
+print(f"  Direction (normal): {result['direction']}")
+print(f"  Size X: {result['sizeX']:.6g}")
+print(f"  Size Y: {result['sizeY']:.6g}")
+print(f"  Size Z: {result['sizeZ']:.6g}")
+
+# Reconstruct corners
+start = result['start']
+edge1 = result['edge1']
+edge2 = result['edge2']
+
+reconstructed = [
+    start,
+    start + edge1,
+    start + edge2,
+    start + edge1 + edge2
+]
+
+# Verify all input points are in reconstructed
+allMatched = True
+for ip in points:
+    matched = False
+    for rp in reconstructed:
+        if np.allclose(ip, rp, atol=1e-6):
+            matched = True
+            break
+    if not matched:
+        allMatched = False
+        print(f"  ERROR: Point {ip} not found in reconstructed corners!")
+
+if allMatched:
+    print("  ✓ PASSED")
+else:
+    print("  ✗ FAILED")
 ```
 
 if **name** == “**main**”:
+if len(sys.argv) > 1 and sys.argv[1] == “–test”:
+runTests()
+else:
 app = QApplication(sys.argv)
 window = RectangleConverter()
 window.show()
