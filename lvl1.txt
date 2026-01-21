@@ -133,9 +133,9 @@ def convert(self):
         self.dy.setText(f"{normal[1]:.6g}")
         self.dz.setText(f"{normal[2]:.6g}")
         
-        # Size X is along edge1, Size Y is along edge2, Size Z is thickness (minimal)
-        self.sizeX.setText(f"{size1:.6g}")
-        self.sizeY.setText(f"{size2:.6g}")
+        # Size X is along edge2, Size Y is along edge1, Size Z is thickness (minimal)
+        self.sizeX.setText(f"{size2:.6g}")
+        self.sizeY.setText(f"{size1:.6g}")
         self.sizeZ.setText("0.001")
         
     except ValueError:
