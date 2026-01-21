@@ -107,8 +107,8 @@ def convert(self):
         startPoint = points[0]
         
         # Find the two edges from the starting point
-        edge1 = points[1] - points[0]
-        edge2 = points[3] - points[0]
+        edge1 = points[3] - points[0]
+        edge2 = points[1] - points[0]
         
         # Calculate normal (direction) as cross product of edges
         normal = np.cross(edge2, edge1)  # Swapped order to flip direction
@@ -133,9 +133,9 @@ def convert(self):
         self.dy.setText(f"{normal[1]:.6g}")
         self.dz.setText(f"{normal[2]:.6g}")
         
-        # Size X is along edge2, Size Y is along edge1, Size Z is thickness (minimal)
-        self.sizeX.setText(f"{size2:.6g}")
-        self.sizeY.setText(f"{size1:.6g}")
+        # Size X is along edge1, Size Y is along edge2, Size Z is thickness (minimal)
+        self.sizeX.setText(f"{size1:.6g}")
+        self.sizeY.setText(f"{size2:.6g}")
         self.sizeZ.setText("0.001")
         
     except ValueError:
